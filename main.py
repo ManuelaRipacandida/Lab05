@@ -56,7 +56,7 @@ def main(page: ft.Page):
     def aggiorna_lista_auto():
         lista_auto.controls.clear()
         for auto in autonoleggio.automobili_ordinate_per_marca():
-            stato = "✅" if auto.disponibile else "⛔"#?????
+            stato = "✅" if auto.disponibile else "⛔"
             lista_auto.controls.append(ft.Text(f"{stato} {auto}"))
         page.update()
 
@@ -140,7 +140,7 @@ def main(page: ft.Page):
 
         # Sezione 2
         ft.Text("Modifica Informazioni", size=20),
-        ft.Row(spacing=20 ,#era 200,
+        ft.Row(spacing=200,
                controls=[input_responsabile, pulsante_conferma_responsabile],
                alignment=ft.MainAxisAlignment.CENTER),
 
